@@ -1,31 +1,5 @@
 
 
-function startBackgroundHearts() {
-  const container = document.getElementById('background-hearts');
-  if (!container) return;
-
-  setInterval(() => {
-    const heart = document.createElement('div');
-    heart.className = 'bg-heart';
-    heart.textContent = Math.random() > 0.5 ? '❤️' : '💗';
-
-    const size = 12 + Math.random() * 24;
-    const duration = 10 + Math.random() * 10;
-    const drift = (Math.random() - 0.5) * 200;
-
-    heart.style.left = Math.random() * 100 + 'vw';
-    heart.style.fontSize = size + 'px';
-    heart.style.animationDuration = duration + 's';
-    heart.style.setProperty('--drift', drift + 'px');
-
-    container.appendChild(heart);
-
-    setTimeout(() => heart.remove(), duration * 1000);
-  }, 500);
-}
-
-
-
 // Cargar el SVG y animar los corazones
 fetch('Img/treelove.svg')
   .then(res => res.text())
@@ -266,3 +240,4 @@ function playBackgroundMusic() {
 window.addEventListener('DOMContentLoaded', () => {
   playBackgroundMusic();
 });
+
