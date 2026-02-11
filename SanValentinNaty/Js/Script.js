@@ -46,7 +46,6 @@ fetch('Img/treelove.svg')
           showCountdown();
           // Iniciar música de fondo
           playBackgroundMusic();
-          startBackgroundHearts();
         }, 1200); //Tiempo para agrandar el SVG
       }, totalDuration);
     }, 50);
@@ -240,4 +239,5 @@ function playBackgroundMusic() {
 window.addEventListener('DOMContentLoaded', () => {
   playBackgroundMusic();
 });
+
 
